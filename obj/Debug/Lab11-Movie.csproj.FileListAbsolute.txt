@@ -1,0 +1,7 @@
+c:\users\rjkgi\source\repos\Lab11-Movie\Lab11-Movie\obj\Debug\Lab11-Movie.csprojResolveAssemblyReference.cache
+c:\users\rjkgi\source\repos\Lab11-Movie\Lab11-Movie\obj\Debug\Lab11-Movie.csproj.CoreCompileInputs.cache
+c:\users\rjkgi\source\repos\Lab11-Movie\Lab11-Movie\bin\Debug\Lab11-Movie.exe.config
+c:\users\rjkgi\source\repos\Lab11-Movie\Lab11-Movie\bin\Debug\Lab11-Movie.exe
+c:\users\rjkgi\source\repos\Lab11-Movie\Lab11-Movie\bin\Debug\Lab11-Movie.pdb
+c:\users\rjkgi\source\repos\Lab11-Movie\Lab11-Movie\obj\Debug\Lab11-Movie.exe
+c:\users\rjkgi\source\repos\Lab11-Movie\Lab11-Movie\obj\Debug\Lab11-Movie.pdb
