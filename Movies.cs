@@ -31,17 +31,15 @@ namespace Lab11_Movie
         #region Default constructor - Allows us to initialize the object
         public Movies()
         {
-
-            title = "Movie Title";
-
+            Title = "Movie Title";
         }
         #endregion
 
         #region Overloaded constructors
         public Movies(string movTitle, string movCategory)//These paramaters are settings provided
         {   //property name should always be on the left side
-            title = movTitle;
-            category = movCategory;
+            Title = movTitle;
+            Category = movCategory;
         }
         #endregion
 
