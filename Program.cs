@@ -25,48 +25,72 @@ namespace Lab11_Movie
             MovieList.Add(new Movies("Despicable Me", "Animation"));
 
             //Creation of Categories 
-            string[] Categories =  { "Sci-Fi", "Romance", "Action", "Crime", "Drama", "Animation" };
+            string[] Categories = { "Sci-Fi", "Comedy", "Romance", "Crime", "Drama", "Animation","Action"};
 
 
+             
             bool repeat = true;
             while (repeat)//Loop to continue playing
             {
-                Console.WriteLine("What movie category are you interested in? \n(1)Sci-Fi (2)Comedy (3)Romance (4)Crime (5)Animation");
+                Console.WriteLine("What movie category are you interested in? \n(1)Sci-Fi (2)Comedy (3)Romance (4)Crime (5)Drama (6)Animation (7)Action");
 
                 int MovieChoice;
                 while
-                (!int.TryParse(Console.ReadLine(), out MovieChoice) || MovieChoice < 1 || MovieChoice > 5)//Validation to ensure correct input is given
+                (!int.TryParse(Console.ReadLine(), out MovieChoice) || MovieChoice < 1 || MovieChoice > 7)//Validation to ensure correct input is given
                 {
                     Console.WriteLine("Invalid input, please enter a number from the option list.");
                 }
-                foreach (Movies m in MovieList )//Refers to Movies class file and retrieves elements in
-                                                //MovieList that are assigned to the users requested category
+                foreach (Movies m in MovieList)//Refers to Movies class file and retrieves elements in
+                                               //MovieList that are assigned to the users requested category
                 {
-                    if (Categories[MovieChoice-1] == m.Category)//condition compares user input to Movies Class file - Category Property
+                    if (Categories[MovieChoice - 1] == m.Category)//condition compares user input to Movies Class file - Category Property
                     {
                         m.PrintInfo();//Prints element that meets criteria
                     }
-                    
+
                 }
+                
 
-                Console.Write("Would you like to select another category?(y/n)");
-                string input = Console.ReadLine().ToLower();
+                bool anotherChoice = PlayAgain("Would you like to select another category?(y/n)");
+            }
+        }
 
+        public static bool PlayAgain(string response)
+
+        {
+            Console.WriteLine(response);
+
+            string input = Console.ReadLine().ToLower();
+
+            while (true)
+
+            {
 
                 if (input == "y")
+
                 {
-                    repeat = true;
+                    return true;
+                }
+
+                else if (input == "n")
+
+                {
+                    Console.WriteLine("Goodbye!");
+                    return false;
                 }
 
                 else
-                {
-                    Console.WriteLine("Goodbye!");
-                    break;
-                }
-           
 
+                {
+                    Console.WriteLine("Invalid input. Please select (y/n) to choose another category");
+                   
+                }
             }
+
+   
 
         }
     }
 }
+             
+
